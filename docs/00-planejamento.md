@@ -13,6 +13,14 @@
 
 ### Base de conhecimento
 
+A base de conhecimento é a fonte de dados que o agente utilizará.
+
+A base do Equilibra contém os seguintes arquivos:
+
+#### `produtos_financeiros.json`
+
+Lista os tipos de investimentos disponíveis, contém uma explicação sobre o investimento, nível de risco, liquidez, perfil indicado e objetivos comuns.
+
 ## ETAPA 3
 
 ### Prompts do Agente
