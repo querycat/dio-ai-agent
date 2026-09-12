@@ -64,7 +64,7 @@ Documenta os prompts que definem o comportamento do agente:
 - **Exemplos de Interação**: Cenários de uso com entrada e saída esperada.
 - **Tratamento de Edge Cases**: Como o agente lida com situações limite.
 
-Veja mais em: _02-prompts_
+Para mais detalhes sobre essas etapa, veja o seguinte arquivo: [prompts](https://github.com/querycat/dio-ai-agent/blob/main/docs/02-prompts.md)
 
 ## ETAPA 4
 
