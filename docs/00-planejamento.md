@@ -24,6 +24,9 @@ Lista os tipos de investimentos disponíveis, contém uma explicação sobre o i
 `perfil_investidor.json`
 Dados fictícios de um investidor.
 
+`transacoes.csv`
+Dados fictícios de transações financeiras do usuário.
+
 ## ETAPA 3
 
 ### Prompts do Agente
