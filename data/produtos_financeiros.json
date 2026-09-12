@@ -1,0 +1,531 @@
+{
+  "base_conhecimento": {
+    "titulo": "Produtos de Investimento",
+    "pais": "Brasil",
+    "objetivo": "Fornecer ao Equilibra informações educativas sobre os principais produtos de investimento disponíveis no mercado brasileiro.",
+
+    "regra_geral": {
+      "descricao": "O risco de um investimento não determina sozinho se ele é adequado. O Equilibra deve considerar o objetivo financeiro, prazo, necessidade de liquidez, capacidade de suportar perdas, conhecimento do usuário e perfil de risco antes de apresentar um produto como alternativa.",
+      "principio": "O Equilibra deve educar e orientar, mas não substituir um profissional financeiro nem tomar decisões de investimento pelo usuário."
+    },
+
+    "produtos": [
+      {
+        "nome": "Tesouro Direto",
+        "categoria": "Renda Fixa",
+        "descricao": "Programa que permite que pessoas físicas invistam em títulos públicos federais, emprestando dinheiro ao governo em troca de uma remuneração.",
+        "tipos": [
+          {
+            "nome": "Tesouro Selic",
+            "caracteristica": "Rentabilidade vinculada à taxa Selic."
+          },
+          {
+            "nome": "Tesouro Prefixado",
+            "caracteristica": "Possui uma taxa de remuneração definida no momento da compra."
+          },
+          {
+            "nome": "Tesouro IPCA+",
+            "caracteristica": "Combina a variação do IPCA com uma taxa de juros prefixada."
+          }
+        ],
+        "nivel_risco": "baixo_a_moderado",
+        "liquidez": "alta",
+        "perfis_indicados": [
+          "conservador",
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "reserva financeira",
+          "objetivos de médio prazo",
+          "aposentadoria",
+          "proteção contra inflação",
+          "planejamento de longo prazo"
+        ],
+        "principais_riscos": [
+          "risco de mercado em resgates antes do vencimento",
+          "variação do preço dos títulos"
+        ],
+        "alertas": [
+          "Tesouro Selic é geralmente mais adequado para objetivos de curto prazo e reserva de emergência.",
+          "Tesouro Prefixado e Tesouro IPCA+ podem apresentar variações relevantes de preço antes do vencimento.",
+          "Vender um título antes do vencimento pode resultar em valor diferente do inicialmente esperado."
+        ]
+      },
+
+      {
+        "nome": "CDB",
+        "nome_completo": "Certificado de Depósito Bancário",
+        "categoria": "Renda Fixa",
+        "descricao": "Título emitido por bancos para captação de recursos. O investidor empresta dinheiro à instituição financeira e recebe uma remuneração.",
+        "tipos": [
+          "prefixado",
+          "pós-fixado",
+          "indexado"
+        ],
+        "nivel_risco": "baixo_a_moderado",
+        "liquidez": "variavel",
+        "perfis_indicados": [
+          "conservador",
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "reserva de emergência",
+          "objetivos de curto prazo",
+          "objetivos de médio prazo",
+          "diversificação da renda fixa"
+        ],
+        "principais_riscos": [
+          "risco de crédito da instituição emissora",
+          "risco de liquidez"
+        ],
+        "protecao": {
+          "fgc": true,
+          "observacao": "CDBs elegíveis contam com cobertura do FGC dentro dos limites e condições estabelecidos."
+        },
+        "alertas": [
+          "Nem todo CDB possui liquidez diária.",
+          "Uma taxa de remuneração maior pode estar associada a maior risco ou prazo mais longo.",
+          "Não escolher um CDB apenas pelo maior percentual do CDI."
+        ]
+      },
+
+      {
+        "nome": "LCI",
+        "nome_completo": "Letra de Crédito Imobiliário",
+        "categoria": "Renda Fixa",
+        "descricao": "Título relacionado à captação de recursos para o setor imobiliário.",
+        "nivel_risco": "baixo_a_moderado",
+        "liquidez": "baixa_a_media",
+        "perfis_indicados": [
+          "conservador",
+          "moderado"
+        ],
+        "objetivos": [
+          "objetivos de médio prazo",
+          "diversificação da renda fixa"
+        ],
+        "principais_riscos": [
+          "risco de crédito da instituição emissora",
+          "risco de liquidez"
+        ],
+        "protecao": {
+          "fgc": true,
+          "observacao": "LCIs elegíveis podem contar com cobertura do FGC dentro dos limites e condições estabelecidos."
+        },
+        "tributacao": {
+          "pessoa_fisica": "Tradicionalmente isenta de Imposto de Renda, observadas as regras tributárias vigentes."
+        },
+        "alertas": [
+          "A isenção tributária não significa automaticamente maior rentabilidade.",
+          "Comparar rentabilidade líquida, prazo e liquidez."
+        ]
+      },
+
+      {
+        "nome": "LCA",
+        "nome_completo": "Letra de Crédito do Agronegócio",
+        "categoria": "Renda Fixa",
+        "descricao": "Título relacionado à captação de recursos para o financiamento do agronegócio.",
+        "nivel_risco": "baixo_a_moderado",
+        "liquidez": "baixa_a_media",
+        "perfis_indicados": [
+          "conservador",
+          "moderado"
+        ],
+        "objetivos": [
+          "objetivos de médio prazo",
+          "diversificação da renda fixa"
+        ],
+        "principais_riscos": [
+          "risco de crédito da instituição emissora",
+          "risco de liquidez"
+        ],
+        "protecao": {
+          "fgc": true,
+          "observacao": "LCAs elegíveis podem contar com cobertura do FGC dentro dos limites e condições estabelecidos."
+        },
+        "tributacao": {
+          "pessoa_fisica": "Tradicionalmente isenta de Imposto de Renda, observadas as regras tributárias vigentes."
+        },
+        "alertas": [
+          "A isenção tributária não significa automaticamente maior rentabilidade.",
+          "Comparar rentabilidade líquida, prazo e liquidez."
+        ]
+      },
+
+      {
+        "nome": "Fundos de Investimento",
+        "categoria": "Fundos",
+        "descricao": "Estruturas que reúnem recursos de diversos investidores para formar uma carteira administrada de acordo com uma política de investimentos.",
+        "tipos": [
+          "fundo de renda fixa",
+          "fundo de ações",
+          "fundo multimercado",
+          "fundo cambial"
+        ],
+        "nivel_risco": "variavel",
+        "liquidez": "variavel",
+        "perfis_indicados": [
+          "conservador",
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "diversificação",
+          "exposição a diferentes classes de ativos",
+          "gestão profissional de carteira"
+        ],
+        "principais_riscos": [
+          "risco de mercado",
+          "risco de crédito",
+          "risco de liquidez",
+          "risco relacionado à estratégia do fundo"
+        ],
+        "alertas": [
+          "O nível de risco depende da categoria e da estratégia do fundo.",
+          "Verificar política de investimento, taxas, prazo de resgate e composição da carteira.",
+          "Rentabilidade passada não garante rentabilidade futura."
+        ]
+      },
+
+      {
+        "nome": "Ações",
+        "categoria": "Renda Variável",
+        "descricao": "Representam uma parcela do capital de uma empresa. Ao comprar uma ação, o investidor se torna acionista e participa dos resultados e riscos daquele negócio.",
+        "nivel_risco": "alto",
+        "liquidez": "alta",
+        "perfis_indicados": [
+          "arrojado"
+        ],
+        "perfis_que_podem_utilizar_com_restricoes": [
+          "moderado"
+        ],
+        "horizonte_preferencial": "longo_prazo",
+        "objetivos": [
+          "crescimento patrimonial",
+          "participação nos resultados de empresas",
+          "investimento de longo prazo"
+        ],
+        "principais_riscos": [
+          "volatilidade",
+          "risco de mercado",
+          "risco relacionado à empresa",
+          "possibilidade de perda de capital"
+        ],
+        "alertas": [
+          "Não existe garantia de rentabilidade.",
+          "Não é adequada para dinheiro necessário no curto prazo.",
+          "Não deve ser tratada como substituta de reserva de emergência."
+        ]
+      },
+
+      {
+        "nome": "ETFs",
+        "nome_completo": "Exchange Traded Funds",
+        "categoria": "Fundos negociados em bolsa",
+        "descricao": "Fundos negociados em bolsa que buscam acompanhar determinado índice ou estratégia.",
+        "tipos": [
+          "ETF de ações brasileiras",
+          "ETF de ações internacionais",
+          "ETF de renda fixa",
+          "ETF cambial",
+          "ETF de commodities"
+        ],
+        "nivel_risco": "variavel",
+        "liquidez": "geralmente_alta",
+        "perfis_indicados": [
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "diversificação",
+          "exposição a índices",
+          "investimento de longo prazo"
+        ],
+        "principais_riscos": [
+          "risco de mercado",
+          "risco relacionado ao índice ou estratégia",
+          "risco de liquidez"
+        ],
+        "alertas": [
+          "O risco depende dos ativos ou índices acompanhados pelo ETF.",
+          "ETFs de ações tendem a apresentar maior risco que ETFs de renda fixa.",
+          "Diversificação não elimina o risco de perda."
+        ]
+      },
+
+      {
+        "nome": "Fundos Imobiliários",
+        "sigla": "FII",
+        "categoria": "Fundos",
+        "descricao": "Fundos que investem em ativos relacionados ao mercado imobiliário, incluindo imóveis físicos, títulos imobiliários e outros FIIs.",
+        "nivel_risco": "moderado_a_alto",
+        "liquidez": "moderada_a_alta",
+        "perfis_indicados": [
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "exposição ao mercado imobiliário",
+          "geração potencial de renda",
+          "diversificação patrimonial"
+        ],
+        "principais_riscos": [
+          "risco de mercado",
+          "vacância",
+          "risco de crédito dos locatários",
+          "variação das taxas de juros",
+          "desvalorização das cotas"
+        ],
+        "alertas": [
+          "Os rendimentos distribuídos não são garantidos.",
+          "O preço das cotas pode sofrer oscilações.",
+          "Não devem ser tratados como investimento de baixo risco."
+        ]
+      },
+
+      {
+        "nome": "Debêntures",
+        "categoria": "Renda Fixa",
+        "descricao": "Títulos de dívida emitidos por empresas. O investidor empresta dinheiro para a empresa emissora em troca de remuneração.",
+        "nivel_risco": "moderado_a_alto",
+        "liquidez": "baixa",
+        "perfis_indicados": [
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "diversificação",
+          "investimentos de médio prazo",
+          "investimentos de longo prazo"
+        ],
+        "principais_riscos": [
+          "risco de crédito",
+          "risco de liquidez",
+          "risco de mercado"
+        ],
+        "alertas": [
+          "A empresa emissora pode não conseguir honrar suas obrigações.",
+          "Maior remuneração pode representar maior risco de crédito.",
+          "Não possuem a mesma proteção do FGC existente em produtos elegíveis."
+        ]
+      },
+
+      {
+        "nome": "CRI",
+        "nome_completo": "Certificado de Recebíveis Imobiliários",
+        "categoria": "Renda Fixa",
+        "descricao": "Título relacionado a recebíveis do setor imobiliário.",
+        "nivel_risco": "moderado_a_alto",
+        "liquidez": "baixa_a_moderada",
+        "perfis_indicados": [
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "diversificação",
+          "investimentos de médio prazo",
+          "investimentos de longo prazo"
+        ],
+        "principais_riscos": [
+          "risco de crédito",
+          "risco de liquidez",
+          "risco relacionado aos recebíveis"
+        ],
+        "alertas": [
+          "Não deve ser classificado como baixo risco apenas por ser renda fixa.",
+          "Analisar a estrutura da operação, devedores e garantias.",
+          "Verificar a tributação vigente antes de investir."
+        ]
+      },
+
+      {
+        "nome": "CRA",
+        "nome_completo": "Certificado de Recebíveis do Agronegócio",
+        "categoria": "Renda Fixa",
+        "descricao": "Título relacionado a recebíveis do setor do agronegócio.",
+        "nivel_risco": "moderado_a_alto",
+        "liquidez": "baixa_a_moderada",
+        "perfis_indicados": [
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "diversificação",
+          "investimentos de médio prazo",
+          "investimentos de longo prazo"
+        ],
+        "principais_riscos": [
+          "risco de crédito",
+          "risco de liquidez",
+          "risco relacionado aos recebíveis"
+        ],
+        "alertas": [
+          "Não deve ser classificado como baixo risco apenas por ser renda fixa.",
+          "Analisar a estrutura da operação, devedores e garantias.",
+          "Verificar a tributação vigente antes de investir."
+        ]
+      },
+
+      {
+        "nome": "Previdência Privada",
+        "categoria": "Previdência",
+        "descricao": "Produto destinado principalmente ao planejamento financeiro de longo prazo, aposentadoria e, dependendo da estrutura, planejamento sucessório.",
+        "tipos": [
+          {
+            "nome": "PGBL",
+            "caracteristica": "Pode permitir benefício fiscal para determinados contribuintes que atendam às condições legais."
+          },
+          {
+            "nome": "VGBL",
+            "caracteristica": "Possui tratamento tributário diferente do PGBL e pode ser utilizado por pessoas que não aproveitam a dedução do PGBL."
+          }
+        ],
+        "nivel_risco": "variavel",
+        "liquidez": "baixa_a_moderada",
+        "perfis_indicados": [
+          "conservador",
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "aposentadoria",
+          "planejamento de longo prazo",
+          "planejamento sucessório",
+          "acumulação patrimonial"
+        ],
+        "principais_riscos": [
+          "risco de mercado",
+          "risco relacionado aos fundos escolhidos",
+          "risco de liquidez",
+          "custos e taxas"
+        ],
+        "alertas": [
+          "O risco depende dos fundos e estratégias escolhidos.",
+          "Avaliar taxas, tributação, regras de resgate e composição dos fundos.",
+          "Não classificar previdência privada como uma única categoria de risco."
+        ]
+      },
+
+      {
+        "nome": "Criptoativos",
+        "categoria": "Ativos Digitais",
+        "descricao": "Ativos digitais baseados em tecnologias criptográficas e, em muitos casos, em redes blockchain.",
+        "exemplos": [
+          "Bitcoin",
+          "Ether"
+        ],
+        "nivel_risco": "muito_alto",
+        "liquidez": "variavel",
+        "perfis_indicados": [
+          "arrojado"
+        ],
+        "objetivos": [
+          "exposição a ativos digitais",
+          "diversificação de uma parcela do patrimônio"
+        ],
+        "principais_riscos": [
+          "alta volatilidade",
+          "risco de mercado",
+          "risco tecnológico",
+          "risco regulatório",
+          "risco operacional",
+          "risco de custódia"
+        ],
+        "alertas": [
+          "Não devem ser tratados como substitutos da reserva de emergência.",
+          "Os preços podem apresentar grandes oscilações.",
+          "O usuário deve compreender os riscos antes de investir."
+        ]
+      },
+
+      {
+        "nome": "COE",
+        "nome_completo": "Certificado de Operações Estruturadas",
+        "categoria": "Investimento Estruturado",
+        "descricao": "Produto que combina características de diferentes instrumentos financeiros em uma única estrutura, podendo oferecer exposição a ações, índices, moedas, commodities ou outros ativos.",
+        "nivel_risco": "moderado_a_alto",
+        "liquidez": "baixa",
+        "perfis_indicados": [
+          "moderado",
+          "arrojado"
+        ],
+        "objetivos": [
+          "exposição a estratégias estruturadas",
+          "diversificação"
+        ],
+        "principais_riscos": [
+          "risco de mercado",
+          "risco de crédito",
+          "risco de liquidez",
+          "risco relacionado à estrutura do produto"
+        ],
+        "alertas": [
+          "Verificar cenários de ganho e perda.",
+          "Verificar prazo e condições de resgate.",
+          "Verificar se existe proteção de capital e em quais condições.",
+          "Entender completamente a estrutura antes de investir.",
+          "Não apresentar COE genericamente como investimento com capital protegido."
+        ]
+      },
+
+      {
+        "nome": "Poupança",
+        "categoria": "Renda Fixa",
+        "descricao": "Modalidade tradicional de aplicação financeira oferecida por instituições financeiras.",
+        "nivel_risco": "baixo",
+        "liquidez": "alta",
+        "perfis_indicados": [
+          "conservador"
+        ],
+        "objetivos": [
+          "guardar dinheiro",
+          "objetivos de curto prazo"
+        ],
+        "principais_riscos": [
+          "perda de poder de compra pela inflação",
+          "custo de oportunidade"
+        ],
+        "alertas": [
+          "Baixo risco não significa necessariamente melhor rentabilidade.",
+          "Comparar com outras alternativas de baixo risco considerando rentabilidade, inflação, liquidez e objetivo."
+        ]
+      }
+    ],
+
+    "classificacao_risco": {
+      "baixo": {
+        "descricao": "Investimentos com menor possibilidade de perdas relevantes, embora nenhum investimento seja completamente livre de riscos."
+      },
+      "baixo_a_moderado": {
+        "descricao": "Investimentos geralmente mais estáveis, mas que podem apresentar riscos adicionais dependendo das condições."
+      },
+      "moderado": {
+        "descricao": "Investimentos que podem apresentar oscilações ou riscos de crédito e liquidez relevantes."
+      },
+      "moderado_a_alto": {
+        "descricao": "Investimentos com possibilidade significativa de perdas ou maior exposição a riscos de mercado, crédito ou liquidez."
+      },
+      "alto": {
+        "descricao": "Investimentos sujeitos a oscilações significativas e possibilidade relevante de perda de capital."
+      },
+      "muito_alto": {
+        "descricao": "Investimentos com elevada volatilidade e possibilidade significativa de perdas, podendo incluir riscos adicionais tecnológicos, regulatórios ou operacionais."
+      }
+    },
+
+    "perfis_investidor": {
+      "conservador": {
+        "descricao": "Prioriza preservação do patrimônio e estabilidade, aceitando menor potencial de retorno em troca de menor exposição a riscos."
+      },
+      "moderado": {
+        "descricao": "Aceita determinado nível de oscilação e risco em busca de maior potencial de retorno, mantendo preocupação relevante com preservação patrimonial."
+      },
+      "arrojado": {
+        "descricao": "Aceita maior volatilidade e possibilidade de perdas para buscar maior potencial de retorno no médio e longo prazo."
+      }
+    }
+  }
+}
