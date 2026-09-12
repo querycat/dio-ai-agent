@@ -58,6 +58,14 @@ with open('data/produtos_finceiros.json', 'r', encoding='utf-8') as f:
 
 ### Prompts do Agente
 
+Documenta os prompts que definem o comportamento do agente:
+
+- **System Prompt**: Instruções gerais de comportamento e restrições.
+- **Exemplos de Interação**: Cenários de uso com entrada e saída esperada.
+- **Tratamento de Edge Cases**: Como o agente lida com situações limite.
+
+Veja mais em: _02-prompts_
+
 ## ETAPA 4
 
 ### Aplicação funcional
