@@ -22,10 +22,37 @@ A base do Equilibra contém os seguintes arquivos:
 Lista os tipos de investimentos disponíveis, contém uma explicação sobre o investimento, nível de risco, liquidez, perfil indicado e objetivos comuns.
 
 `perfil_investidor.json`
-Dados fictícios de um investidor.
+Dados fictícios de um investidor. Esse arquivo ajuda a personalizar as explicações e necessidades de aprendizado do usuário.
 
 `transacoes.csv`
-Dados fictícios de transações financeiras do usuário.
+Dados fictícios de transações financeiras do usuário. Ajuda a analisar os padrões de gastos do usuário.
+
+
+#### Como esses dados são carregados?
+
+Os dados utilizados pelo agente são armazenados em arquivos locais dentro da pasta data/. Cada arquivo possui um formato adequado ao tipo de informação que contém.
+
+Durante a inicialização, esses arquivos são carregados para a memória da aplicação e ficam disponíveis para que o agente possa analisar a situação financeira do usuário e utilizar a base de conhecimento para fornecer orientações contextualizadas.
+
+
+```python
+
+import panda as pd
+import json
+
+# CSV
+
+transações = pd.read_csv('data/transações.csv')
+
+# JSON
+
+with open('data/perfil_investidor.json', 'r', encoding='utf-8') as f:
+    perfil = json.load(f)
+
+with open('data/produtos_finceiros.json', 'r', encoding='utf-8') as f:
+    produtos = json.load(f)
+
+```
 
 ## ETAPA 3
 
