@@ -40,17 +40,10 @@ Durante a inicialização, esses arquivos são carregados para a memória da apl
 import panda as pd
 import json
 
-# CSV
-
-transações = pd.read_csv('data/transações.csv')
-
-# JSON
-
-with open('data/perfil_investidor.json', 'r', encoding='utf-8') as f:
-    perfil = json.load(f)
-
-with open('data/produtos_finceiros.json', 'r', encoding='utf-8') as f:
-    produtos = json.load(f)
+# CARREGAR DADOS
+perfil = json.load(open('.data/perfil_investidor.json'))
+produtos = json.load(open('.data/produtos_financeiros'))
+transacoes = pd.read_csv('./data/transacoes.csv')
 
 ```
 
