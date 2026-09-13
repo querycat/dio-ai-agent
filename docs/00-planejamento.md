@@ -135,7 +135,11 @@ Assim, o código integra dados estruturados, regras de comportamento, modelo de 
 
 ### Avaliação de métricas
 
+É a etapa em que o agente é testado e avaliado para verificar se está funcionando conforme o esperado. São definidos cenários de teste e observados critérios como correção das respostas, cumprimento das regras, capacidade de utilizar os dados fornecidos e comportamento diante de perguntas fora do escopo.
+
 ## ETAPA 6
 
 ### Pitch
+
+É a etapa de apresentação do projeto. O objetivo é explicar de forma rápida e clara qual problema foi identificado, qual solução foi desenvolvida, como ela funciona, o que a torna relevante/inovadora e qual impacto pode gerar. É basicamente transformar a documentação técnica em uma apresentação compreensível para outras pessoas.
 
