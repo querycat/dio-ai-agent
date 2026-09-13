@@ -106,14 +106,72 @@ O agente pode utilizar emojis de forma pontual, quando ajudarem na organização
 
 ## Arquitetura
 
-## Diagrama
+### Diagrama
+
+```mermaid
+flowchart TD
+    A[Usuário] -->|Pergunta| B[Interface Streamlit]
+
+    D[Perfil do Investidor<br/>perfil_investidor.json] --> E[Construção do Contexto]
+    F[Produtos Financeiros<br/>produtos_financeiros.json] --> E
+    G[Transações<br/>transacoes.csv] --> E
+
+    E --> C[Função perguntar]
+    C --> H[System Prompt<br/>Regras do Equilibra]
+
+    H --> I[Prompt Final<br/>Contexto + Pergunta]
+    I -->|Requisição HTTP| J[Ollama]
+    J -->|Modelo de linguagem| K[GPT-OSS]
+
+    K -->|Resposta gerada| J
+    J -->|JSON| C
+    C --> B
+    B -->|Resposta| A
+```
 
 ## Componentes
 
----
+### Componentes
+
+| Componente | Descrição |
+|------------|-----------|
+| **Interface** | Chatbot desenvolvido com **Streamlit**, responsável pela interação com o usuário. |
+| **LLM** | **GPT-OSS via Ollama**, utilizado para interpretar as perguntas e gerar as respostas do agente. |
+| **Base de Conhecimento** | Arquivos **JSON** contendo o perfil do investidor e informações sobre produtos financeiros. |
+| **Dados do Usuário** | Arquivo **CSV** com as transações financeiras utilizadas para contextualizar as respostas. |
+| **Contexto** | Combinação dos dados do usuário, perfil, produtos financeiros e regras do agente em um único contexto enviado ao modelo. |
+| **System Prompt** | Define a persona do Equilibra, seu objetivo, linguagem e restrições, como não recomendar investimentos específicos. |
+| **Integração com LLM** | Biblioteca **Requests**, utilizada para realizar a comunicação HTTP entre a aplicação e a API local do Ollama. |
+| **Processamento de Dados** | Biblioteca **Pandas**, utilizada para carregar e manipular os dados das transações financeiras. |
+| **Validação** | Regras definidas no **System Prompt** para evitar recomendações específicas, limitar o escopo do agente e orientar o modelo a admitir quando não possui uma informação. |
 
 ## Segurança e anti-alucinação
 
+O Equilibra utiliza regras definidas no **System Prompt** para reduzir respostas inadequadas ou informações inventadas pelo modelo. O agente é instruído a utilizar os dados fornecidos no contexto, admitir quando não possui determinada informação e não criar dados financeiros que não estejam disponíveis.
+
+Além disso, o agente possui restrições de escopo e não deve realizar recomendações específicas de investimentos. Sua função é exclusivamente educacional, explicando conceitos financeiros de forma contextualizada.
+
+> As estratégias atuais reduzem o risco de alucinação por meio de instruções ao modelo, mas não garantem a eliminação completa de respostas incorretas.
+
 ## Estratégias Adotadas
 
+- **Contextualização:** os dados do perfil do investidor, transações e produtos financeiros são enviados ao modelo para gerar respostas contextualizadas.
+- **System Prompt:** define o comportamento, a personalidade, o escopo e as regras que o agente deve seguir.
+- **Restrição de recomendações:** o agente não recomenda investimentos específicos, atuando apenas como educador financeiro.
+- **Controle de escopo:** perguntas que não estejam relacionadas à educação financeira são recusadas.
+- **Instrução contra invenções:** quando uma informação não estiver disponível, o modelo é instruído a informar que não possui aquela informação.
+- **Linguagem acessível:** o agente deve explicar conceitos financeiros de forma simples e evitar jargões desnecessários.
+- **Personalização:** exemplos e explicações podem utilizar os dados financeiros disponibilizados no contexto do usuário.
+
 ## Limitações Declaradas
+
+O Equilibra possui algumas limitações relacionadas à arquitetura atual:
+
+- Não substitui um **profissional de educação ou orientação financeira**.
+- Não realiza **recomendações personalizadas de investimentos**.
+- Não possui um mecanismo automático de verificação factual das respostas geradas pelo modelo.
+- A prevenção contra alucinações depende principalmente das instruções presentes no **System Prompt**.
+- As informações sobre produtos financeiros dependem da atualização da base de conhecimento utilizada pelo sistema.
+- Os dados financeiros utilizados pelo agente são provenientes dos arquivos fornecidos à aplicação e podem estar incompletos ou desatualizados.
+- A aplicação atualmente não possui um sistema dedicado de **memória de conversas**, portanto cada interação utiliza o contexto definido durante a execução.
+- Falhas na comunicação com o **Ollama** ou problemas no carregamento dos arquivos podem impedir a geração de respostas.
