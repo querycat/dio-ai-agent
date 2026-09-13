@@ -8,4 +8,4 @@ Projeto final do **Bootcamp GenAI, Dados & Cyber, do Bradesco**. O objetivo é p
 - Cocriar soluções financeiras de forma consultiva
 - Garantir segurança e confiabilidade nas respostas (anti-alucinação)
 
-Para mais detalhes sobre as etapas deste projeto, leia a documentação e o [planejamento](https://github.com/querycat/dio-ai-agent/blob/main/docs/00-planejamento.md)
+Para mais detalhes sobre as etapas deste projeto, leia a [documentação](https://github.com/querycat/dio-ai-agent/blob/main/docs/01-documentacao.md) e o [planejamento](https://github.com/querycat/dio-ai-agent/blob/main/docs/00-planejamento.md)
